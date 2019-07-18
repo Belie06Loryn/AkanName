@@ -1,0 +1,25 @@
+@media screen and (min-width: 480px) and (max-width: 767px){
+  body {
+    border: 2px;
+    padding: 6px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+}
+.hr{ 
+  display: block;
+  margin-left:200px;
+  margin-right: 200px;
+  border-style: inset;
+  border-width: 1px;
+} 
+.footer {
+  position: static;
+  background-color:transparent;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color:rgb(255, 255, 255);
+  text-align: center;
+}

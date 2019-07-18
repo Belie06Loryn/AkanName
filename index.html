@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Days Detection</title>
+    <link rel="stylesheet" href="days.css">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" media="all" type="text/css">
+    <script src="dist/js/bootstrap.min.js"></script>   
+</head>
+<body>
+    <div class="jumbotron text-center" style="background-color: black">
+        <h1 style="font-style: italic;text-shadow: whitesmoke 3px;color:slategrey">AKAN NAMES</h1>
+        <img src="image/day.jpg" style="float: right;height: 100px;width: 100px">    
+        <div class="well" style="background-color: black;color:white">
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> "What day of the week was that?"Here you can find the day of the week which you have born and have your Akan Name.</p>
+            <h4>Let Take a Try Down Here</h4>
+            <img src="image/foo.jpg"style="height: 60px;width: 60px">
+        </div>
+        <hr>
+        <div class="well">
+                <div class="container">
+                    <h4 style="color: blue">Your BirthDay Date Please!</h4>
+                    <form action="days">
+                        <label for="bday">Enter your BirthDay:</label>  <input type="date" name="bday" max="2099-12-31" min="1500-01-01"><br><br>
+                        <label for="genda">Enter your Genda:</label>   <input type="checkbox" id="male" onclick="Male">Male   <input type="checkbox" id="female" onclick="Female">Female<br><p id="text" style="display:none">Choose GendaPlease!</p><br>
+                        <p><input type="submit" value="Calculate" ONCLICK="compute(this.form)"> <input type="reset"
+                        value="Clear"> </p>
+                    </form>
+                </div>
+            </div>
+            <div>
+                    <footer class="footer">
+                            <hr class="hr">
+                            <p style="font-size:11px;">@2019 by ____Belie06Loryn.Proudly Created</p>
+                    </footer>
+            </div>
+    </div>
+    
+</body>
+</html>
