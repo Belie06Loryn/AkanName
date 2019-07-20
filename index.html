@@ -169,13 +169,16 @@ function day(){
            ya=6;
        }
        var date = new Date(document.getElementById("bday").value);
-       var day = date.getDate();
-       var month = date.getMonth();
+       var dd = date.getDate();
+       var mm = date.getMonth();
        var year = date.getFullYear();
        var yy = parseInt(year.toString().slice(2,4));
+       var x = parseInt(year.toString().slice(2,3));
+       var y = parseInt(year.toString().slice(3,4));
        var cc = Math.ceil(year/100);
-    }
+       var ans =dd+mo+cc+yy+(x+y)%7;
 }
+
 </script>
 </body> 
 </html>
