@@ -61,14 +61,68 @@ function gender(){
  }
 }
 function day(){
-  var MM = parseFloat(days.bday.mm.value);
-  var DD = parseFloat(days.bday.dd.value);
-  var YY = parseFloat(days.bday.yy.value);
-  var CC = parseFloat(yy-1)/100+1;
-  var day =(((cc/4)-2*cc-1) + ((5*yy/4))+((26*(mm+1)/10))+ dd) % 7;
-  alert(Math.round(day));
-  days.da.value = da[day]
-  //..value = bday[MM/DD/YY]
+    var mo;
+    for(var i=0;i<=months;i++)
+        if(months[i] == 0)
+       {
+           mo = 1;
+       }
+        
+       if(months[i] == 1)
+       {
+           mo = 4;
+       }
+        
+       if(months[i] == 2)
+       {
+           mo = 4;
+       }
+        
+       if(months[i] == 3)
+       {
+           mo = 0;
+       }
+        
+       if(months[i] == 4)
+       {
+           mo = 2;
+       }
+        
+       if(months[i] == 5)
+       {
+           mo = 5;
+       }
+        
+       if(months[i] == 6)
+       {
+           mo = 0;
+       }
+        
+       if(months[i] == 7)
+       {
+           mo = 3;
+       }
+        
+       if(months[i] == 8)
+       {
+           mo = 6;
+       }
+        
+       if(months[i] == 9)
+       {
+           mo = 1;
+       }
+        
+       if(months[i] == 10)
+       {
+           mo = 4;
+       }
+        
+       if(months[i] == 11)
+       {
+           mo = 6;
+       }
+  
 }
 </script>
 </body> 
