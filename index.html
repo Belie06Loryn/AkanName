@@ -48,7 +48,19 @@ var female=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 var days =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 // months Array
 var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  
+function gender(){
+    var m = document.getElementById('male').value;
+    var f = document.getElementById('female').value;
+  if (m.checked == true){
+    m.onclick = gender();
+  } else if(f.checked == true){
+    f.onclick = gender();
+  }
+   else {
+    alert("Insert Gender Please");
+ }
+}
+
 </script>
 </body> 
 </html>
