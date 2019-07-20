@@ -62,7 +62,8 @@ function gender(){
 }
 function day(){
     var mo;
-    for(var i=0;i<=months;i++)
+    var i;
+    for(i=0;i<=months;i++){
         if(months[i] == 0)
        {
            mo = 1;
@@ -122,7 +123,51 @@ function day(){
        {
            mo = 6;
        }
-  
+    }
+       
+       for(j=0;j<=days;j++){
+        if(res == 0)
+       {
+           days[j];
+       }else if(res == 1)
+       {
+           days[j];
+       }else if(res == 2)
+       {
+           days[j];
+       }else if(res == 3)
+       {
+           days[j];
+       }else if(res == 4)
+       {
+        days[j];
+       }else if(res == 5)
+       {
+        days[j];
+       }else 
+       {
+        days[j];
+       }
+       }
+       var ya;
+       if(year>=1500 || year<=1599){
+           ya=0;
+       }
+       else if(year>=1600 || year<=1699){
+           ya=6;
+       }
+       else if(year>=1700 || year<=1799){
+           ya=4;
+       }
+       else if(year>=1800 || year<=1899){
+           ya=2;
+       }
+       else if(year>=1900 || year<=1999){
+           ya=0;
+       }
+       else if(year>=2000 || year<=2099){
+           ya=6;
+       }
 }
 </script>
 </body> 
