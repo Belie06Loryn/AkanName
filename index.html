@@ -8,7 +8,8 @@
     <title>Days Detection</title>
     <link rel="stylesheet" href="days.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css" media="all" type="text/css">
-    <script src="dist/js/bootstrap.min.js"></script>   
+    <script src="dist/js/bootstrap.min.js"></script>  
+   
 </head>
 <body>
     <div class="jumbotron text-center" style="background-color: black">
@@ -23,11 +24,10 @@
         <div class="well">
                 <div class="container">
                     <h4 style="color: blue">Your BirthDay Date Please!</h4>
-                    <form action="days">
-                        <label for="bday">Enter your BirthDay:</label>  <input type="date" name="bday" max="2099-12-31" min="1500-01-01"><br><br>
-                        <label for="genda">Enter your Genda:</label>   <input type="checkbox" id="male" onclick="Male">Male   <input type="checkbox" id="female" onclick="Female">Female<br><p id="text" style="display:none">Choose GendaPlease!</p><br>
-                        <p><input type="submit" value="Calculate" ONCLICK="compute(this.form)"> <input type="reset"
-                        value="Clear"> </p>
+                    <form action="days" name="days">
+                        <label for="bday">Enter your BirthDay:</label>  <input type="date" id="bday" name="bday" max="2099-12-31" min="1500-01-01"><br><br>
+                        <label for="genda">Enter your Gender:</label>   <input type="radio" name="gender" value="Male" id="male" onclick="gender()">Male   <input type="radio" name="gender" value="Female" id="female" onclick="gender()">Female<br><br>
+                        <p><input type="button" value="Calculate" onclick=""> <input type="reset" value="Clear" class="btn btn-danger"></p>
                     </form>
                 </div>
             </div>
@@ -38,6 +38,17 @@
                     </footer>
             </div>
     </div>
-    
-</body>
+    <script>
+
+// male akan name Array
+var men =["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+// female akan name Array
+var female=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+// days of Week Array
+var days =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+// months Array
+var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  
+</script>
+</body> 
 </html>
