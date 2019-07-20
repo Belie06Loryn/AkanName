@@ -168,6 +168,13 @@ function day(){
        else if(year>=2000 || year<=2099){
            ya=6;
        }
+       var date = new Date(document.getElementById("bday").value);
+       var day = date.getDate();
+       var month = date.getMonth();
+       var year = date.getFullYear();
+       var yy = parseInt(year.toString().slice(2,4));
+       var cc = Math.ceil(year/100);
+    }
 }
 </script>
 </body> 
