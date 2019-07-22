@@ -8,7 +8,7 @@
     <title>Days Detection</title>
     <link rel="stylesheet" href="days.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css" media="all" type="text/css">
-    <script src="dist/js/bootstrap.min.js"></script>  
+    
    
 </head>
 <body>
@@ -24,10 +24,11 @@
         <div class="well">
                 <div class="container">
                     <h4 style="color: blue">Your BirthDay Date Please!</h4>
-                    <form action="days" name="days">
+                    <form action="days" name="days" id="days">
                         <label for="bday">Enter your BirthDay:</label>  <input type="date" id="bday" name="bday" max="2099-12-31" min="1500-01-01"><br><br>
-                        <label for="genda">Enter your Gender:</label>   <input type="radio" name="gender" value="Male" id="male" onclick="gender()">Male   <input type="radio" name="gender" value="Female" id="female" onclick="gender()">Female<br><br>
-                        <p><input type="button" value="Calculate" onclick=""> <input type="reset" value="Clear" class="btn btn-danger"></p>
+                        <label for="genda">Enter your Gender:</label>   <input type="radio" name="gender" value="Male" id="male">Male   <input type="radio" name="gender" value="Female" id="female">Female<br><br>
+                        <p><input type="button" value="Calculate" onclick="day()"> <input type="reset" value="Clear" class="btn btn-danger"></p>
+                      
                     </form>
                 </div>
             </div>
@@ -38,137 +39,121 @@
                     </footer>
             </div>
     </div>
-    <script>
-
-// male akan name Array
-var men =["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-// female akan name Array
-var female=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-// days of Week Array
-var days =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-// months Array
-var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-function gender(){
-    var m = document.getElementById('male').value;
-    var f = document.getElementById('female').value;
-  if (m.checked == true){
-    m.onclick = gender();
-  } else if(f.checked == true){
-    f.onclick = gender();
-  }
-   else {
-    alert("Insert Gender Please");
- }
-}
+    <script>   
 function day(){
+    var date = new Date(document.getElementById("bday").value);
+    console.log(date);
+    var dd = date.getDate();
+    console.log(dd);
+    var mm = date.getMonth()+1;
+    console.log(mm);
+    var year = date.getFullYear();
+    console.log(year);
+
+    var m = document.getElementById("male").value;
+    var f = document.getElementById("female").value;
+    if(m==='Male'){
+        console.log(m);
+    } else {
+        console.log(f);
+    } 
+    
+   
+    // male akan name Array
+    var men =["Kwame","Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi"];
+    // female akan name Array
+    var female=["Ama","Akosua","Adwoa","Abenaa","Akua","Yaa","Afua"];
+    // days of Week Array
+    var days =["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"];
+    // months Array
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+   
+
     var mo;
-    var i;
+    var i;        
     for(i=0;i<=months;i++){
-        if(months[i] == 0)
-       {
-           mo = 1;
-       }
-        
-       if(months[i] == 1)
-       {
-           mo = 4;
-       }
-        
-       if(months[i] == 2)
-       {
-           mo = 4;
-       }
-        
-       if(months[i] == 3)
-       {
-           mo = 0;
-       }
-        
-       if(months[i] == 4)
-       {
-           mo = 2;
-       }
-        
-       if(months[i] == 5)
-       {
-           mo = 5;
-       }
-        
-       if(months[i] == 6)
-       {
-           mo = 0;
-       }
-        
-       if(months[i] == 7)
-       {
-           mo = 3;
-       }
-        
-       if(months[i] == 8)
-       {
-           mo = 6;
-       }
-        
-       if(months[i] == 9)
-       {
-           mo = 1;
-       }
-        
-       if(months[i] == 10)
-       {
-           mo = 4;
-       }
-        
-       if(months[i] == 11)
-       {
-           mo = 6;
-       }
+    if(months[i] == 0)
+    {
+        mo = 1;
     }
-       
-       for(j=0;j<=days;j++){
-        if(res == 0)
-       {
-           days[j];
-       }else if(res == 1)
-       {
-           days[j];
-       }else if(res == 2)
-       {
-           days[j];
-       }else if(res == 3)
-       {
-           days[j];
-       }else if(res == 4)
-       {
-        days[j];
-       }else if(res == 5)
-       {
-        days[j];
-       }else 
-       {
-        days[j];
-       }
-       }
-       var ya;
-       if(year>=1500 || year<=1599){
-           ya=0;
-       }
-       else if(year>=1600 || year<=1699){
-           ya=6;
-       }
-       else if(year>=1700 || year<=1799){
-           ya=4;
-       }
-       else if(year>=1800 || year<=1899){
-           ya=2;
-       }
-       else if(year>=1900 || year<=1999){
-           ya=0;
-       }
-       else if(year>=2000 || year<=2099){
-           ya=6;
-       }
-       var date = new Date(document.getElementById("bday").value);
+        
+    if(months[i] == 1)
+    {
+        mo = 4;
+    }
+   
+    if(months[i] == 2)
+    {
+        mo = 4;
+    }
+        
+    if(months[i] == 3)
+    {
+        mo = 0;
+    }
+        
+    if(months[i] == 4)
+    {
+        mo = 2;
+    }
+        
+    if(months[i] == 5)
+    {
+        mo = 5;
+    }
+        
+    if(months[i] == 6)
+    {
+        mo = 0;
+    }
+        
+    if(months[i] == 7)
+    {
+        mo = 3;
+    }
+        
+    if(months[i] == 8)
+    {
+        mo = 6;
+    }
+        
+    if(months[i] == 9)
+    {
+        mo = 1;
+    }
+        
+    if(months[i] == 10)
+    {
+        mo = 4;
+    }
+        
+    if(months[i] == 11)
+    {
+        mo = 6;
+    }
+    }
+    
+    
+    var ya;
+    if(year>=1500 || year<=1599){
+        ya=0;
+    }
+    else if(year>=1600 || year<=1699){
+        ya=6;
+    }
+    else if(year>=1700 || year<=1799){
+        ya=4;
+    }
+    else if(year>=1800 || year<=1899){
+        ya=2;
+    }
+    else if(year>=1900 || year<=1999){
+        ya=0;
+    }
+    else if(year>=2000 || year<=2099){
+        ya=6;
+    }
+    var date = new Date(document.getElementById("bday").value);
        var dd = date.getDate();
        var mm = date.getMonth();
        var year = date.getFullYear();
