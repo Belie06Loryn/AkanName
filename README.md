@@ -16,7 +16,15 @@ To start using this project use the following commands:
 git clone https://belie06loryn.github.io/AkanName/
 cd Desktop/Portfolio
 code . [//]:  (this is if Visual Studio Code is your preferred text editor)
+###BDD
+Story: Find your Akan name
 
+As a person interested in knowing your Akan name In order to do so I want you to select your day of birth. This date result will be run in our functions. Then this will enable us calculate and find which day of the week you was born. And from this result our function will be able to deliver your Akan name.
+
+A: The date is selected from the calender.
+B: Select the gender using radio button.
+C: When they are both selected then we can click the Calculate button. Then your Akan name and Day can be displayed with paragraph alert down.
+D: The date is not selected from the calender and the gender. Nothing it gona happen.
 ## Known Bugs
 No Bugs
 ## Technologies Used
