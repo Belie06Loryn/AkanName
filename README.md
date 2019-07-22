@@ -5,6 +5,20 @@
 https://github.com/Belie06Loryn
 ## Description
 This is about find the day you were born in the week days and have a name accordingly the day and your gender.
+## Setup/Installation Requirements
+* GitHub Account
+* Terminal or CMD in Windows PC
+* Any Browser
+* Visual Studio Code 
+##Project setup instructions
+To start using this project use the following commands:
+
+git clone https://belie06loryn.github.io/AkanName/
+cd Desktop/Portfolio
+code . [//]:  (this is if Visual Studio Code is your preferred text editor)
+
+## Known Bugs
+No Bugs
 ## Technologies Used
 Languages I hae used:HTML(HyperText Markerup Language) for designing pages.
                      CSS(Cascading Style Sheet) for making some design and good looking.
