@@ -28,7 +28,8 @@
                         <label for="bday">Enter your BirthDay:</label>  <input type="date" id="bday" name="bday" max="2099-12-31" min="1500-01-01"><br><br>
                         <label for="genda">Enter your Gender:</label>   <input type="radio" name="gender" value="Male" id="male">Male   <input type="radio" name="gender" value="Female" id="female">Female<br><br>
                         <p><input type="button" value="Calculate" onclick="day()"> <input type="reset" value="Clear" class="btn btn-danger"></p>
-                      
+                        <p id="answer" class="alert alert-success"></p>
+                        <p id="name"></p>
                     </form>
                 </div>
             </div>
@@ -58,7 +59,13 @@ function day(){
         console.log(f);
     } 
     
-   
+    var yy = parseInt(year.toString().slice(2,4));
+    var x = parseInt(year.toString().slice(2,3));
+    var y = parseInt(year.toString().slice(3,4));
+    var cc = Math.ceil(year/100);
+    var ans =parseInt(dd+mm+cc+yy+(x+y));
+    var res =parseInt(ans % 7);
+    console.log(Math.round(res));
     // male akan name Array
     var men =["Kwame","Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi"];
     // female akan name Array
@@ -153,15 +160,7 @@ function day(){
     else if(year>=2000 || year<=2099){
         ya=6;
     }
-    var date = new Date(document.getElementById("bday").value);
-       var dd = date.getDate();
-       var mm = date.getMonth();
-       var year = date.getFullYear();
-       var yy = parseInt(year.toString().slice(2,4));
-       var x = parseInt(year.toString().slice(2,3));
-       var y = parseInt(year.toString().slice(3,4));
-       var cc = Math.ceil(year/100);
-       var ans =dd+mo+cc+yy+(x+y)%7;
+
 }
 
 </script>
