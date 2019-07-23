@@ -8,7 +8,7 @@
     <title>Days Detection</title>
     <link rel="stylesheet" href="days.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css" media="all" type="text/css">
-    
+    <link rel="stylesheet" href="dist/js/bootstrap.min.js">
    
 </head>
 <body>
@@ -26,7 +26,7 @@
                     <h4 style="color: blue">Your BirthDay Date Please!</h4>
                     <form action="days" name="days" id="days">
                         <label for="bday">Enter your BirthDay:</label>  <input type="date" id="bday" name="bday" max="2099-12-31" min="1500-01-01"><br><br>
-                        <label for="genda">Enter your Gender:</label>   <input type="radio" name="gender" value="Male" id="male">Male   <input type="radio" name="gender" value="Female" id="female">Female<br><br>
+                        <label for="genda">Enter your Gender:</label>   <input type="radio" name="gender" value="Male" id="gender" checked>Male   <input type="radio" name="gender" value="Female">Female<br><br>
                         <p><input type="button" value="Calculate" onclick="day()" class="btn btn-success"> <input type="reset" value="Clear" class="btn btn-danger"></p>
                         <p id="answer" class="alert alert-success"></p>
                         <p id="name" class="alert alert-success"></p>
@@ -50,14 +50,12 @@ function day(){
     console.log(mm);
     var year = date.getFullYear();
     console.log(year);
-
-    var m = document.getElementById("male").value;
-    var f = document.getElementById("female").value;
-    if(m==='Male'){
-        console.log(m);
-    } else {
-        console.log(f);
-    } 
+     
+    if(document.getElementById("gender").checked){
+        var genda ="Male";
+    } else{
+        var genda ="Female";
+    }
     
     var yy = parseInt(year.toString().slice(2,4));
     var x = parseInt(year.toString().slice(2,3));
@@ -78,62 +76,76 @@ function day(){
     var name = document.getElementById("name").value;
 
     for(var j=0; j<days.length; j++)
-    if(days[res] == 0)
+    if(days[res] == 0 || genda=="Male")
     {
-        document.getElementById("answer").innerHTML=days[j];
-        if(m==="Male"){
-          document.getElementById("name").innerHTML=men[days];  
-        } else{
-          document.getElementById("name").innerHTML=female[days];
-        }
-    }else if(days[res] == 1)
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[0];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + men[0];  
+
+    }else if(days[res] == 1 || genda=="Male")
     {
-        document.getElementById("answer").innerHTML=days[j];
-        if(m==="Male"){
-          document.getElementById("name").innerHTML=men[days];  
-        } else{
-          document.getElementById("name").innerHTML=female[days];
-        }
-    }else if(days[res] == 2)
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[1];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + men[1];  
+
+    }else if(days[res] == 2 || genda=="Male")
     {
-        document.getElementById("answer").innerHTML=days[j];
-        if(m==="Male"){
-          document.getElementById("name").innerHTML=men[days];  
-        } else{
-          document.getElementById("name").innerHTML=female[days];
-        }
-    }else if(days[res] == 3)
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[2];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + men[2];  
+
+    }else if(days[res] == 3 && genda=="Male")
     {
-        document.getElementById("answer").innerHTML=days[j];
-        if(m==="Male"){
-          document.getElementById("name").innerHTML=men[days];  
-        } else{
-          document.getElementById("name").innerHTML=female[days];
-        }
-    }else if(days[res] == 4)
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[3];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + men[3];  
+
+    }else if(days[res] == 4 && genda=="Male")
     {
-        document.getElementById("answer").innerHTML=days[j];
-        if(m==="Male"){
-          document.getElementById("name").innerHTML=men[days];  
-        } else{
-          document.getElementById("name").innerHTML=female[days];
-        }
-    }else if(days[res] == 5)
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[4];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + men[4];  
+
+    }else if(days[res] == 5 && genda=="Male")
     {
-        document.getElementById("answer").innerHTML=days[j];
-        if(m==="Male"){
-          document.getElementById("name").innerHTML=men[days];  
-        } else{
-          document.getElementById("name").innerHTML=female[days];
-        }
-    }else 
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[5];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + men[5];  
+
+    }else if(days[res] == 6 && genda=="Male")
     {
-        document.getElementById("answer").innerHTML=days[j];
-        if(m==="Male"){
-          document.getElementById("name").innerHTML=men[days];  
-        } else{
-          document.getElementById("name").innerHTML=female[days];
-        }
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[6];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + men[6];  
+
+    }else if(days[res] == 0 && genda=="Female")
+    {
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[0];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + female[0]; 
+
+    }else if(days[res] == 1 && genda=="Female")
+    {
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[1];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + female[1]; 
+
+    }else if(days[res] == 2 && genda=="Female")
+    {
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[2];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + female[2]; 
+         
+    }else if(days[res] == 3 && genda=="Female")
+    {
+        document.getElementById("answer").innerHTML="Day is" + ' ' + [3];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + female[3]; 
+         
+    }else if(days[res] == 4 && genda=="Female")
+    {
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[4];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + female[4]; 
+         
+    }else if(days[res] == 5 && genda=="Female")
+    {
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[5];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + female[5]; 
+         
+    }else if(days[res] == 6 && genda=="Female")
+    {
+        document.getElementById("answer").innerHTML="Day is" + ' ' + days[6];
+        document.getElementById("name").innerHTML="Your Name is" + ' ' + female[6]; 
+         
     }
 
     var mo;

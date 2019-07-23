@@ -13,7 +13,11 @@ This is about find the day you were born in the week days and have a name accord
 ## Project setup instructions
 To start using this project use the following commands:
 
+<<<<<<< HEAD
 git clone https://belie06loryn.github.io/AkanName/
+=======
+git clone https://github.com/Belie06Loryn/AkanName.git
+>>>>>>> master
 cd Desktop/Portfolio
 code . [//]:  (this is if Visual Studio Code is your preferred text editor)
 ### BDD
